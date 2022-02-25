@@ -1,13 +1,13 @@
-import React, {useState} from "react";
-import {Form, Formik, FormikHelpers} from 'formik';
+import React, { useState } from "react";
+import { Form, Formik, FormikHelpers } from 'formik';
 
-import {Grid} from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import Box from "@material-ui/core/Box";
-import {Alert} from "@material-ui/lab";
-import {hasValue} from "../inputs/inputHelpers";
-import {makeStyles} from "@material-ui/core/styles";
-
+import { Alert } from "@material-ui/lab";
+import { hasValue } from "../inputs/inputHelpers";
+import { makeStyles } from "@material-ui/core/styles";
+// where  quality matters
 interface IProps {
     schema?: any
     onSubmit: (values: any, actions: FormikHelpers<any>) => any
@@ -48,7 +48,7 @@ const XForm = (props: IProps) => {
         validateOnBlur
         enableReinitialize
 
-    >{({submitForm, isSubmitting, values, errors,touched, submitCount}) => (
+    >{({ submitForm, isSubmitting, values, errors, touched, submitCount }) => (
         <Form>
             <Grid container spacing={0} className={classes.root}>
                 {
@@ -103,9 +103,9 @@ const XForm = (props: IProps) => {
                 {
                     props.debug &&
                     <Grid item xs={12}>
-                                <pre style={{width: '100%', height: "100%"}}>
-                                    {JSON.stringify({values, errors, touched}, null, 2)}
-                                </pre>
+                        <pre style={{ width: '100%', height: "100%" }}>
+                            {JSON.stringify({ values, errors, touched }, null, 2)}
+                        </pre>
                     </Grid>
                 }
             </Grid>
