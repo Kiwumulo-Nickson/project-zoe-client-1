@@ -1,11 +1,12 @@
-import {parseXpath} from "../../utils/jsonHelpers";
+import { parseXpath } from "../../utils/jsonHelpers";
 
+// exporting function desc
 
 export function desc<T>(a: T, b: T, orderBy: keyof T) {
-    if (parseXpath(b,orderBy) < parseXpath(a,orderBy)) {
+    if (parseXpath(b, orderBy) < parseXpath(a, orderBy)) {
         return -1;
     }
-    if (parseXpath(b,orderBy) > parseXpath(a,orderBy)) {
+    if (parseXpath(b, orderBy) > parseXpath(a, orderBy)) {
         return 1;
     }
     return 0;
